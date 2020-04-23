@@ -1,10 +1,12 @@
 [package]
 name = "yahoo-dl"
 version = "0.1.0"
+keywords = ["yahoo", "finances"]
 authors = ["Juan C. Yamacho H. <jcyamacho@gmail.com>"]
 edition = "2018"
+license = "MIT"
+readme = "README.md"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 reqwest = { version = "0.10", features = ["gzip", "cookies"] }
@@ -12,3 +14,12 @@ tokio = { version = "0.2", features = ["full"] }
 uuid = { version = "0.8", features = ["v4"] }
 chrono = "0.4"
 chrono-tz = "0.5"
+
+
+[[example]]
+name = "dividend"
+path = "examples/dividend.rs"
+
+[[example]]
+name = "history"
+path = "examples/history.rs"
